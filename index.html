@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zachary Plumey — Web & Growth Systems for Small Business</title>
+  <meta name="description" content="I build websites, AI phone agents, and lead-generation systems that turn small businesses into machines that book work on autopilot." />
+  <meta property="og:title" content="Zachary Plumey" />
+  <meta property="og:description" content="Websites, AI phone agents & lead-gen systems for small business." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zacharyplumey.com" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    :root{
+      --bg:#0b0c0f; --panel:#13151b; --line:#23262f;
+      --text:#f4f5f7; --muted:#9aa0ab; --accent:#5b8cff; --accent2:#7c5cff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+      background:radial-gradient(1200px 600px at 70% -10%, #161a26 0%, var(--bg) 55%);
+      color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
+      min-height:100vh;
+    }
+    .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+    /* nav */
+    nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+    .brand{font-weight:700;letter-spacing:-.02em}
+    .brand span{color:var(--accent)}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s}
+    nav a:hover{color:var(--text)}
+    /* hero */
+    header{padding:60px 0 48px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;
+      text-transform:uppercase;color:var(--accent);background:rgba(91,140,255,.08);
+      border:1px solid rgba(91,140,255,.2);padding:6px 14px;border-radius:100px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#2ec28a;box-shadow:0 0 0 3px rgba(46,194,138,.18)}
+    h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:22px 0 18px}
+    h1 .grad{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--muted);max-width:620px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;
+      font-size:15px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s}
+    .btn-primary{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 8px 30px rgba(91,140,255,.25)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(91,140,255,.35)}
+    .btn-ghost{background:var(--panel);color:var(--text);border:1px solid var(--line)}
+    .btn-ghost:hover{border-color:#3a3f4d}
+    /* sections */
+    section{padding:40px 0}
+    .label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+    .card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;
+      text-decoration:none;color:inherit;transition:transform .15s,border-color .15s,background .15s}
+    .card:hover{transform:translateY(-3px);border-color:#36506b;background:#161922}
+    .card h3{font-size:17px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;justify-content:space-between}
+    .card h3 .arrow{color:var(--muted);transition:transform .15s}
+    .card:hover h3 .arrow{transform:translate(3px,-3px);color:var(--accent)}
+    .card p{color:var(--muted);font-size:14px;margin-top:8px}
+    .card .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:var(--accent);
+      background:rgba(91,140,255,.08);padding:4px 10px;border-radius:6px}
+    /* about */
+    .about{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:32px}
+    .about p{color:var(--muted);font-size:16px}
+    .about p + p{margin-top:14px}
+    .stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:24px}
+    .stat b{display:block;font-size:24px;font-weight:800;color:var(--text)}
+    .stat span{font-size:13px;color:var(--muted)}
+    /* footer */
+    footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0 60px;
+      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    footer .links{display:flex;gap:20px}
+    footer a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .15s}
+    footer a:hover{color:var(--text)}
+    footer small{color:#5b606b;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Zachary <span>Plumey</span></div>
+      <div style="display:flex;gap:24px">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow"><span class="dot"></span> Available for new projects</span>
+      <h1>I build <span class="grad">websites &amp; lead systems</span> that book work on autopilot.</h1>
+      <p class="lead">
+        Web developer and systems builder for small businesses — sites, AI phone agents,
+        and automated lead pipelines that capture every call and turn it into a job.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Start a project →</a>
+        <a class="btn btn-ghost" href="#work">See the work</a>
+      </div>
+    </header>
+
+    <!-- ========= WORK / "your other stuff" — edit these cards / links ========= -->
+    <section id="work">
+      <div class="label">Selected Work</div>
+      <div class="grid">
+        <a class="card" href="https://coreterraflooring.com" target="_blank" rel="noopener">
+          <h3>CoreTerra Flooring <span class="arrow">↗</span></h3>
+          <p>Commercial flooring site with a quote pipeline, AI phone agent, and lead alerts.</p>
+          <span class="tag">Web + Automation</span>
+        </a>
+        <a class="card" href="https://heritagefloorworks.com" target="_blank" rel="noopener">
+          <h3>Heritage Floorworks <span class="arrow">↗</span></h3>
+          <p>Flooring brand site wired to a Google-Sheet CRM, booking flow, and SMS alerts.</p>
+          <span class="tag">Web + CRM</span>
+        </a>
+        <!-- Add more: duplicate a card above and swap the href, title, and text -->
+        <a class="card" href="#contact">
+          <h3>Your project <span class="arrow">↗</span></h3>
+          <p>Need a site or a lead system that actually brings in work? Let's build it.</p>
+          <span class="tag">Let's talk</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="label">About</div>
+      <div class="about">
+        <p>
+          I'm Zachary — I build the digital backbone for small, hands-on businesses:
+          clean websites, AI phone agents that never miss a call, and automated systems
+          that route every lead straight to the owner's phone.
+        </p>
+        <p>
+          The goal is simple: more booked jobs, less time chasing them. I handle the tech
+          so you can stay on the tools.
+        </p>
+        <div class="stats">
+          <div class="stat"><b>Web</b><span>Sites &amp; landing pages</span></div>
+          <div class="stat"><b>AI</b><span>Phone agents &amp; intake</span></div>
+          <div class="stat"><b>Systems</b><span>CRM &amp; lead automation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="label">Contact</div>
+      <div class="about" style="text-align:center">
+        <p style="font-size:18px;color:var(--text);font-weight:600">Let's build something that works while you sleep.</p>
+        <p style="margin-bottom:22px">Tell me what you're trying to grow and I'll show you the fastest path.</p>
+        <!-- EDIT: confirm your contact email below -->
+        <a class="btn btn-primary" href="mailto:zacharyplumey@gmail.com">Email me →</a>
+      </div>
+    </section>
+
+    <footer>
+      <small>© 2026 Zachary Plumey</small>
+      <div class="links">
+        <!-- EDIT: add your real socials / links here -->
+        <a href="mailto:zacharyplumey@gmail.com">Email</a>
+        <a href="https://github.com/XachP" target="_blank" rel="noopener">GitHub</a>
+        <a href="#work">Work</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
