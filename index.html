@@ -1,166 +1,343 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zachary Plumey — Web & Growth Systems for Small Business</title>
-  <meta name="description" content="I build websites, AI phone agents, and lead-generation systems that turn small businesses into machines that book work on autopilot." />
-  <meta property="og:title" content="Zachary Plumey" />
-  <meta property="og:description" content="Websites, AI phone agents & lead-gen systems for small business." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://zacharyplumey.com" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-  <style>
-    :root{
-      --bg:#0b0c0f; --panel:#13151b; --line:#23262f;
-      --text:#f4f5f7; --muted:#9aa0ab; --accent:#5b8cff; --accent2:#7c5cff;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-      background:radial-gradient(1200px 600px at 70% -10%, #161a26 0%, var(--bg) 55%);
-      color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
-      min-height:100vh;
-    }
-    .wrap{max-width:920px;margin:0 auto;padding:0 24px}
-    /* nav */
-    nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
-    .brand{font-weight:700;letter-spacing:-.02em}
-    .brand span{color:var(--accent)}
-    nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s}
-    nav a:hover{color:var(--text)}
-    /* hero */
-    header{padding:60px 0 48px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;
-      text-transform:uppercase;color:var(--accent);background:rgba(91,140,255,.08);
-      border:1px solid rgba(91,140,255,.2);padding:6px 14px;border-radius:100px}
-    .dot{width:7px;height:7px;border-radius:50%;background:#2ec28a;box-shadow:0 0 0 3px rgba(46,194,138,.18)}
-    h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:22px 0 18px}
-    h1 .grad{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--muted);max-width:620px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;
-      font-size:15px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s}
-    .btn-primary{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 8px 30px rgba(91,140,255,.25)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(91,140,255,.35)}
-    .btn-ghost{background:var(--panel);color:var(--text);border:1px solid var(--line)}
-    .btn-ghost:hover{border-color:#3a3f4d}
-    /* sections */
-    section{padding:40px 0}
-    .label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-    .card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;
-      text-decoration:none;color:inherit;transition:transform .15s,border-color .15s,background .15s}
-    .card:hover{transform:translateY(-3px);border-color:#36506b;background:#161922}
-    .card h3{font-size:17px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;justify-content:space-between}
-    .card h3 .arrow{color:var(--muted);transition:transform .15s}
-    .card:hover h3 .arrow{transform:translate(3px,-3px);color:var(--accent)}
-    .card p{color:var(--muted);font-size:14px;margin-top:8px}
-    .card .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:var(--accent);
-      background:rgba(91,140,255,.08);padding:4px 10px;border-radius:6px}
-    /* about */
-    .about{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:32px}
-    .about p{color:var(--muted);font-size:16px}
-    .about p + p{margin-top:14px}
-    .stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:24px}
-    .stat b{display:block;font-size:24px;font-weight:800;color:var(--text)}
-    .stat span{font-size:13px;color:var(--muted)}
-    /* footer */
-    footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0 60px;
-      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-    footer .links{display:flex;gap:20px}
-    footer a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .15s}
-    footer a:hover{color:var(--text)}
-    footer small{color:#5b606b;font-size:13px}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zachary Plumey — Front-End &amp; Full-Stack Developer</title>
+<meta name="description" content="Zachary Plumey — front-end and full-stack developer (React, Node.js) who also builds AI automation. I design, build, and ship production web apps end-to-end." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1A1A1C; --bg-2:#141416; --band:#161618;
+    --card:#222226; --card-line:#2E2E33; --line:#37373C;
+    --text:#C5C5CB; --dim:#8A8A92; --head:#F5F5F6; --faint:#6E6E76;
+    --accent:#F5F5F6; --accent-bright:#FFFFFF; --eyebrow:#D6D7DC; --soft:#9A9AA2;
+    --maxw:1080px;
+    --disp:'Space Grotesk',sans-serif; --body:'IBM Plex Sans',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{ font-family:var(--body); background:var(--bg); color:var(--text);
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{ font-family:var(--mono); font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; color:var(--eyebrow); }
+  ::selection{background:var(--accent-bright);color:#161618}
+  /* NAV */
+  .nav{ position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 28px; transition:background .3s ease, box-shadow .3s ease, padding .3s ease; }
+  .nav.solid{ background:rgba(20,20,22,.82); backdrop-filter:blur(10px); box-shadow:0 1px 0 var(--line); padding:12px 28px; }
+  .nav .brand{ font-family:var(--mono); font-size:.82rem; letter-spacing:.04em; color:var(--head); }
+  .nav .brand b{ color:#fff; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:var(--mono); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); transition:color .25s ease; }
+  .nav-links a:hover{ color:#fff; }
+  .btn-dl{ font-family:var(--mono); font-size:.76rem; letter-spacing:.06em; border:1px solid rgba(255,255,255,.45); color:var(--head); padding:8px 14px; border-radius:2px; transition:all .25s ease; }
+  .btn-dl:hover{ background:#fff; border-color:#fff; color:#161618; }
+  /* HERO */
+  .hero{ position:relative; overflow:hidden; background: radial-gradient(120% 90% at 78% 6%, rgba(255,255,255,.10), transparent 55%), radial-gradient(90% 80% at 6% 100%, rgba(255,255,255,.04), transparent 60%), linear-gradient(165deg,var(--bg) 0%,var(--bg-2) 100%); color:var(--head); min-height:88vh; display:flex; align-items:center; padding:140px 0 80px; }
+  .hero::before{ content:""; position:absolute; inset:0; opacity:.6; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:64px 64px; mask-image:linear-gradient(180deg,transparent,black 30%,black 70%,transparent); }
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{ font-family:var(--disp); font-weight:700; font-size:clamp(2.7rem,8vw,5.4rem); line-height:.98; letter-spacing:-.025em; color:#fff; margin:.28em 0 .32em; }
+  .hero h1 .pulse{ color:#fff; -webkit-text-stroke:0; opacity:.55; }
+  .hero .lede{ font-size:clamp(1.05rem,2.1vw,1.32rem); max-width:30ch; color:var(--text); font-weight:400; margin-bottom:2.2em; }
+  .hero .lede b{ color:#fff; font-weight:600; }
+  .actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:3.2em; }
+  .act{ font-family:var(--mono); font-size:.82rem; letter-spacing:.04em; padding:13px 20px; border-radius:3px; transition:transform .2s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease; display:inline-flex; align-items:center; gap:9px; }
+  .act.primary{ background:#F5F5F6; color:#161618; font-weight:500; box-shadow:0 6px 26px -10px rgba(255,255,255,.4); }
+  .act.primary:hover{ transform:translateY(-2px); background:#fff; box-shadow:0 12px 30px -10px rgba(255,255,255,.5); }
+  .act.ghost{ border:1px solid rgba(255,255,255,.22); color:var(--text); }
+  .act.ghost:hover{ border-color:rgba(255,255,255,.7); color:#fff; transform:translateY(-2px); }
+  .act .arr{ transition:transform .2s ease; }
+  .act:hover .arr{ transform:translate(2px,-2px); }
+  .trio{ display:flex; flex-wrap:wrap; gap:34px; padding-top:26px; border-top:1px solid rgba(255,255,255,.12); }
+  .trio div{ max-width:22ch; }
+  .trio .k{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--eyebrow); margin-bottom:5px; }
+  .trio .v{ font-size:.94rem; color:var(--dim); line-height:1.45; }
+  /* SECTION SHELL */
+  section.block{ padding:96px 0; }
+  .sec-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:46px; flex-wrap:wrap; }
+  .sec-idx{ font-family:var(--mono); font-size:.8rem; color:var(--soft); letter-spacing:.1em; }
+  .sec-title{ font-family:var(--disp); font-weight:600; color:var(--head); font-size:clamp(1.55rem,3.6vw,2.3rem); letter-spacing:-.01em; }
+  .sec-sub{ font-family:var(--mono); font-size:.76rem; color:var(--dim); letter-spacing:.06em; margin-left:auto; }
+  /* WORK */
+  .grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  .card{ position:relative; background:var(--card); border:1px solid var(--card-line); border-radius:8px; padding:26px 26px 24px; transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease; display:flex; flex-direction:column; }
+  .card:hover{ transform:translateY(-4px); border-color:rgba(255,255,255,.45); box-shadow:0 18px 44px -22px rgba(0,0,0,.8); }
+  .card .pj-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+  .card h3{ font-family:var(--disp); font-weight:600; font-size:1.22rem; color:var(--head); letter-spacing:-.01em; }
+  .card .type{ font-family:var(--mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--soft); margin-top:4px; }
+  .card p{ font-size:.95rem; color:var(--text); margin:14px 0 18px; }
+  .tags{ display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; }
+  .tag{ font-family:var(--mono); font-size:.7rem; letter-spacing:.03em; color:var(--text); background:rgba(255,255,255,.04); border:1px solid var(--line); padding:4px 9px; border-radius:3px; }
+  .card .go{ position:absolute; top:24px; right:24px; color:var(--dim); font-family:var(--mono); font-size:1rem; transition:transform .22s ease, color .22s ease; }
+  .card.linked:hover .go{ color:#fff; transform:translate(3px,-3px); }
+  .stretch{ position:absolute; inset:0; }
+  /* EXPERIENCE rail */
+  .rail{ position:relative; padding-left:28px; }
+  .rail::before{ content:""; position:absolute; left:5px; top:6px; bottom:6px; width:2px; background:linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.1)); }
+  .job{ position:relative; padding:0 0 40px; }
+  .job:last-child{ padding-bottom:0; }
+  .job::before{ content:""; position:absolute; left:-28px; top:7px; width:12px; height:12px; border-radius:50%; background:var(--band); border:2px solid rgba(255,255,255,.75); transition:background .25s ease, box-shadow .25s ease; }
+  .job:hover::before{ background:#fff; box-shadow:0 0 0 5px rgba(255,255,255,.14); }
+  .job .when{ font-family:var(--mono); font-size:.74rem; letter-spacing:.06em; color:var(--soft); }
+  .job h3{ font-family:var(--disp); font-weight:600; font-size:1.18rem; color:var(--head); margin:5px 0 2px; letter-spacing:-.01em; }
+  .job .co{ font-family:var(--mono); font-size:.8rem; color:var(--dim); margin-bottom:12px; }
+  .job ul{ list-style:none; display:flex; flex-direction:column; gap:8px; }
+  .job li{ position:relative; padding-left:18px; font-size:.95rem; color:var(--text); }
+  .job li::before{ content:"\25B9"; position:absolute; left:0; color:#fff; font-size:.8rem; top:2px; opacity:.8; }
+  /* SKILLS */
+  .skills-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:26px 40px; }
+  .skill-group .gl{ font-family:var(--mono); font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{ font-size:.86rem; color:var(--text); background:rgba(255,255,255,.03); border:1px solid var(--line); padding:6px 12px; border-radius:4px; transition:border-color .2s ease,color .2s ease; }
+  .chip:hover{ border-color:rgba(255,255,255,.55); color:#fff; }
+  /* EDU + CERTS */
+  .twocol{ display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+  .edu-item{ margin-bottom:26px; }
+  .edu-item .when{ font-family:var(--mono); font-size:.74rem; color:var(--soft); letter-spacing:.05em; }
+  .edu-item h3{ font-family:var(--disp); font-weight:600; font-size:1.05rem; color:var(--head); margin:4px 0 2px; }
+  .edu-item .co{ font-family:var(--mono); font-size:.78rem; color:var(--dim); }
+  .col-label{ font-family:var(--mono); font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  /* FOOTER */
+  .foot{ background:linear-gradient(165deg,var(--bg-2) 0%,#0F0F11 100%); color:var(--head); padding:90px 0 46px; position:relative; overflow:hidden; }
+  .foot::before{ content:""; position:absolute; inset:0; opacity:.7; background:radial-gradient(70% 80% at 50% 0%, rgba(255,255,255,.06), transparent 60%); }
+  .foot .wrap{ position:relative; z-index:2; }
+  .foot h2{ font-family:var(--disp); font-weight:700; font-size:clamp(2rem,5vw,3.2rem); color:#fff; letter-spacing:-.02em; margin:.2em 0 .5em; line-height:1.02; }
+  .foot h2 span{ color:#fff; opacity:.55; }
+  .foot-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:64px; }
+  .foot-meta{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; padding-top:26px; border-top:1px solid rgba(255,255,255,.12); font-family:var(--mono); font-size:.76rem; color:var(--dim); letter-spacing:.04em; }
+  .foot-meta a:hover{ color:#fff; }
+  /* REVEAL */
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  .hero .eyebrow,.hero h1,.hero .lede,.hero .actions,.hero .trio{ opacity:0; transform:translateY(20px); animation:rise .7s ease forwards; }
+  .hero h1{ animation-delay:.08s } .hero .lede{ animation-delay:.16s } .hero .actions{ animation-delay:.24s } .hero .trio{ animation-delay:.32s }
+  @keyframes rise{ to{ opacity:1; transform:none } }
+  @media(max-width:760px){ .nav-links{ display:none } .grid,.skills-grid,.twocol{ grid-template-columns:1fr } section.block{ padding:72px 0 } .hero{ min-height:auto; padding:128px 0 68px } .trio{ gap:22px } .sec-sub{ display:none } }
+  @media(prefers-reduced-motion:reduce){ *{ animation:none !important; transition:none !important } .reveal{ opacity:1; transform:none } html{ scroll-behavior:auto } }
+</style>
 </head>
 <body>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="brand">zachary<b>.</b>plumey</a>
+  <div class="nav-links">
+    <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+  <a href="./Zachary_Plumey_Resume.pdf" class="btn-dl" download>Résumé ↓</a>
+</nav>
+
+<header class="hero" id="top">
   <div class="wrap">
-    <nav>
-      <div class="brand">Zachary <span>Plumey</span></div>
-      <div style="display:flex;gap:24px">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <div class="eyebrow">Front-End &amp; Full-Stack Developer · AI Automation</div>
+    <h1>Zachary<br>Plumey<span class="pulse">.</span></h1>
+    <p class="lede">I build and ship web apps front to back — <b>React</b> interfaces, <b>Node.js</b> back-ends, and <b>AI automation</b> — from first call to live deployment.</p>
+    <div class="actions">
+      <a href="#work" class="act primary">See the work <span class="arr">↗</span></a>
+      <a href="mailto:zacharyplumey2001@gmail.com" class="act ghost">Get in touch</a>
+    </div>
+    <div class="trio">
+      <div><div class="k">End to end</div><div class="v">Consultation, design, build, domain, hosting, launch.</div></div>
+      <div><div class="k">AI agents</div><div class="v">Voice &amp; SMS receptionists with live lead capture.</div></div>
+      <div><div class="k">Stack</div><div class="v">React · Node · Shopify · n8n · Bland AI · Twilio</div></div>
+    </div>
+  </div>
+</header>
 
-    <header>
-      <span class="eyebrow"><span class="dot"></span> Available for new projects</span>
-      <h1>I build <span class="grad">websites &amp; lead systems</span> that book work on autopilot.</h1>
-      <p class="lead">
-        Web developer and systems builder for small businesses — sites, AI phone agents,
-        and automated lead pipelines that capture every call and turn it into a job.
-      </p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Start a project →</a>
-        <a class="btn btn-ghost" href="#work">See the work</a>
+<main>
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-idx">01</span><h2 class="sec-title">Selected Work</h2><span class="sec-sub">Client sites &amp; systems, shipped</span>
       </div>
-    </header>
-
-    <!-- ========= WORK / "your other stuff" — edit these cards / links ========= -->
-    <section id="work">
-      <div class="label">Selected Work</div>
       <div class="grid">
-        <a class="card" href="https://coreterraflooring.com" target="_blank" rel="noopener">
-          <h3>CoreTerra Flooring <span class="arrow">↗</span></h3>
-          <p>Commercial flooring site with a quote pipeline, AI phone agent, and lead alerts.</p>
-          <span class="tag">Web + Automation</span>
-        </a>
-        <a class="card" href="https://heritagefloorworks.com" target="_blank" rel="noopener">
-          <h3>Heritage Floorworks <span class="arrow">↗</span></h3>
-          <p>Flooring brand site wired to a Google-Sheet CRM, booking flow, and SMS alerts.</p>
-          <span class="tag">Web + CRM</span>
-        </a>
-        <!-- Add more: duplicate a card above and swap the href, title, and text -->
-        <a class="card" href="#contact">
-          <h3>Your project <span class="arrow">↗</span></h3>
-          <p>Need a site or a lead system that actually brings in work? Let's build it.</p>
-          <span class="tag">Let's talk</span>
-        </a>
-      </div>
-    </section>
 
-    <section id="about">
-      <div class="label">About</div>
-      <div class="about">
-        <p>
-          I'm Zachary — I build the digital backbone for small, hands-on businesses:
-          clean websites, AI phone agents that never miss a call, and automated systems
-          that route every lead straight to the owner's phone.
-        </p>
-        <p>
-          The goal is simple: more booked jobs, less time chasing them. I handle the tech
-          so you can stay on the tools.
-        </p>
-        <div class="stats">
-          <div class="stat"><b>Web</b><span>Sites &amp; landing pages</span></div>
-          <div class="stat"><b>AI</b><span>Phone agents &amp; intake</span></div>
-          <div class="stat"><b>Systems</b><span>CRM &amp; lead automation</span></div>
+        <article class="card linked reveal">
+          <a class="stretch" href="https://coreterraflooring.com" target="_blank" rel="noopener" aria-label="CoreTerra Flooring"></a>
+          <span class="go">↗</span>
+          <div class="pj-top"><div><h3>CoreTerra Flooring</h3><div class="type">Commercial · Build + AI</div></div></div>
+          <p>Full brand site, build, and deployment for a commercial flooring contractor — plus an AI phone receptionist and SMS lead capture.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Render</span><span class="tag">Bland AI</span><span class="tag">Twilio</span></div>
+        </article>
+
+        <article class="card linked reveal">
+          <a class="stretch" href="https://a-dpowerwashing.com" target="_blank" rel="noopener" aria-label="A&D Power Washing"></a>
+          <span class="go">↗</span>
+          <div class="pj-top"><div><h3>A&amp;D Power Washing</h3><div class="type">Service · Build + AI</div></div></div>
+          <p>Service site with a before/after slider and an AI lead-capture agent that logs to Sheets and fires instant SMS + email alerts.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Bland AI</span><span class="tag">Twilio</span><span class="tag">Apps Script</span></div>
+        </article>
+
+        <article class="card linked reveal">
+          <a class="stretch" href="https://menidentityhair.com" target="_blank" rel="noopener" aria-label="Men Identity Hair Studio"></a>
+          <span class="go">↗</span>
+          <div class="pj-top"><div><h3>Men Identity Hair Studio</h3><div class="type">Booking · Web design</div></div></div>
+          <p>Clean, booking-focused site for a men's grooming studio, designed and shipped end-to-end on a custom domain.</p>
+          <div class="tags"><span class="tag">Web design</span><span class="tag">Render</span><span class="tag">DNS</span></div>
+        </article>
+
+        <article class="card linked reveal">
+          <a class="stretch" href="https://loompsychotherapy.com" target="_blank" rel="noopener" aria-label="Loom Psychotherapy"></a>
+          <span class="go">↗</span>
+          <div class="pj-top"><div><h3>Loom Psychotherapy</h3><div class="type">Practice · Web design</div></div></div>
+          <p>Calm, trust-first website for a private therapy practice — typography and pacing tuned to feel safe and unhurried.</p>
+          <div class="tags"><span class="tag">Web design</span><span class="tag">Branding</span></div>
+        </article>
+
+        <article class="card linked reveal">
+          <a class="stretch" href="https://sacredlightandspirit.org" target="_blank" rel="noopener" aria-label="Sacred Light and Spirit"></a>
+          <span class="go">↗</span>
+          <div class="pj-top"><div><h3>Sacred Light &amp; Spirit</h3><div class="type">Wellness · Web design</div></div></div>
+          <p>Warm, editorial site for a wellness and spiritual practice, balancing imagery with readable long-form content.</p>
+          <div class="tags"><span class="tag">Web design</span><span class="tag">Content</span></div>
+        </article>
+
+        <article class="card reveal">
+          <div class="pj-top"><div><h3>SoftCuff</h3><div class="type">DTC e-commerce</div></div></div>
+          <p>Direct-to-consumer Shopify storefront with Klaviyo email flows, Google Ads, and SEO content — built and benchmarked against category competitors.</p>
+          <div class="tags"><span class="tag">Shopify</span><span class="tag">Klaviyo</span><span class="tag">Google Ads</span><span class="tag">SEO</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience" style="background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-idx">02</span><h2 class="sec-title">Experience</h2><span class="sec-sub">Most recent first</span>
+      </div>
+      <div class="rail">
+
+        <div class="job reveal">
+          <div class="when">2024 — Present</div>
+          <h3>Founder · Web Developer &amp; AI Automation Consultant</h3>
+          <div class="co">ZJP Ventures LLC · Chicago, IL</div>
+          <ul>
+            <li>Build and deploy full client websites end-to-end — consultation, scope, design, domain and hosting, and launch — on React, Node.js, and Render.</li>
+            <li>Built AI voice and SMS receptionists with Bland AI and Twilio (A2P 10DLC registered), capturing leads to Google Sheets with automated SMS and email alerts.</li>
+            <li>Designed n8n workflow automations for lead routing, cross-listing, and content pipelines, cutting manual work for clients.</li>
+            <li>Launched a DTC Shopify storefront with Klaviyo flows, Google Ads, and SEO; manage local SEO, Google Business Profile, and GA4 for service clients.</li>
+          </ul>
+        </div>
+
+        <div class="job reveal">
+          <div class="when">2022 — 2024</div>
+          <h3>Supervising Manager &amp; Mentor</h3>
+          <div class="co">Globe Life — Liberty National · Insurance Sales</div>
+          <ul>
+            <li>Earned Illinois Life and Health certifications within the first three months, demonstrating a fast grasp of complex regulatory requirements.</li>
+            <li>Promoted to a leadership role and completed advanced training in Texas, then recruited, trained, and mentored a team of new agents.</li>
+            <li>Built a training program covering the full sales cycle on a repeatable, duplicable model.</li>
+          </ul>
+        </div>
+
+        <div class="job reveal">
+          <div class="when">2021 — 2024</div>
+          <h3>Owner &amp; Lead Painter</h3>
+          <div class="co">365 Painters LLC · Chicago, IL</div>
+          <ul>
+            <li>Founded and ran a painting company across residential and industrial projects, managing the full lifecycle from acquisition and quoting to completion and invoicing.</li>
+            <li>Performed minor interior and exterior construction, maintaining a quality-first standard that produced repeat clients.</li>
+          </ul>
+        </div>
+
+        <div class="job reveal">
+          <div class="when">2019 — 2024</div>
+          <h3>Foreman</h3>
+          <div class="co">CertaPro Painters · Chicago, IL</div>
+          <ul>
+            <li>Progressed from Apprentice to Foreman through demonstrated expertise and leadership, running projects from walkthrough to final sign-off.</li>
+            <li>Held 100% customer satisfaction through clear communication, and led crews while independently managing solo jobs.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-idx">03</span><h2 class="sec-title">Skills</h2><span class="sec-sub">Stack &amp; tools</span>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <div class="gl">Web &amp; App Development</div>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">HTML / CSS</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span><span class="chip">Render</span><span class="chip">WordPress</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="gl">AI &amp; Automation</div>
+          <div class="chips"><span class="chip">Bland AI</span><span class="chip">Twilio (A2P 10DLC)</span><span class="chip">n8n</span><span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="gl">E-commerce &amp; Marketing</div>
+          <div class="chips"><span class="chip">Shopify</span><span class="chip">Klaviyo</span><span class="chip">Google Ads</span><span class="chip">SEO</span><span class="chip">Google Business Profile</span><span class="chip">GA4</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="gl">Cloud &amp; Networking</div>
+          <div class="chips"><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">GCP</span><span class="chip">Cisco (CCNA)</span><span class="chip">LAN admin</span><span class="chip">Network security</span></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <div class="label">Contact</div>
-      <div class="about" style="text-align:center">
-        <p style="font-size:18px;color:var(--text);font-weight:600">Let's build something that works while you sleep.</p>
-        <p style="margin-bottom:22px">Tell me what you're trying to grow and I'll show you the fastest path.</p>
-        <!-- EDIT: confirm your contact email below -->
-        <a class="btn btn-primary" href="mailto:zacharyplumey@gmail.com">Email me →</a>
+  <section class="block" id="education" style="background:var(--band);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-idx">04</span><h2 class="sec-title">Education &amp; Certifications</h2>
       </div>
-    </section>
+      <div class="twocol">
+        <div class="reveal">
+          <div class="col-label">Education</div>
+          <div class="edu-item">
+            <div class="when">2019 — 2024</div>
+            <h3>A.A.S., Computer &amp; Local Area Network Technician</h3>
+            <div class="co">Moraine Valley Community College</div>
+          </div>
+          <div class="edu-item">
+            <div class="when">2019</div>
+            <h3>High School Diploma</h3>
+            <div class="co">Argo Community High School</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="col-label">Certifications</div>
+          <div class="chips">
+            <span class="chip">Cisco CCNA</span><span class="chip">Network Security Associate</span><span class="chip">Network Administrator</span><span class="chip">Computer Technician</span><span class="chip">LAN Technician</span><span class="chip">Computer Support Associate</span><span class="chip">D-Wave: Intro to Quantum Computation</span><span class="chip">Arduino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <footer>
-      <small>© 2026 Zachary Plumey</small>
-      <div class="links">
-        <!-- EDIT: add your real socials / links here -->
-        <a href="mailto:zacharyplumey@gmail.com">Email</a>
-        <a href="https://github.com/XachP" target="_blank" rel="noopener">GitHub</a>
-        <a href="#work">Work</a>
-      </div>
-    </footer>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Available for work</div>
+    <h2>Let's build<br>something <span>good.</span></h2>
+    <div class="foot-actions">
+      <a href="mailto:zacharyplumey2001@gmail.com" class="act primary">Email me <span class="arr">↗</span></a>
+      <a href="https://github.com/XachP" target="_blank" rel="noopener" class="act ghost">GitHub</a>
+      <a href="https://www.linkedin.com/in/zachary-plumey-a905751b7/" target="_blank" rel="noopener" class="act ghost">LinkedIn</a>
+    </div>
+    <div class="foot-meta">
+      <span>Zachary Plumey · Chicago, IL</span>
+      <span><a href="tel:+17089864911">(708) 986-4911</a> · <a href="mailto:zacharyplumey2001@gmail.com">zacharyplumey2001@gmail.com</a></span>
+    </div>
   </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  const onScroll=()=>{ nav.classList.toggle('solid', window.scrollY>40); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
