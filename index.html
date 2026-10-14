@@ -3,8 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Zachary Plumey — Front-End &amp; Full-Stack Developer</title>
-<meta name="description" content="Zachary Plumey — front-end and full-stack developer (React, Node.js) who also builds AI automation. I design, build, and ship production web apps end-to-end." />
+<title>Zachary Plumey — Front-End, Full-Stack Developer &amp; IT Support</title>
+<meta name="description" content="Zachary Plumey is a front-end and full-stack developer in the Greater Chicago Area, also available for IT support, help desk, and networking. Open to full-time roles and freelance work." />
+<link rel="canonical" href="https://zacharyplumey.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Zachary Plumey" />
+<meta property="og:url" content="https://zacharyplumey.com/" />
+<meta property="og:title" content="Zachary Plumey — Front-End, Full-Stack &amp; IT Support" />
+<meta property="og:description" content="Open to full-time roles and freelance. Front-end and full-stack development, plus IT support, help desk, and networking. Cisco CCNA (2024)." />
+<meta property="og:image" content="https://zacharyplumey.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Zachary Plumey — front-end and full-stack developer, open to full-time roles and freelance work." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Zachary Plumey — Front-End, Full-Stack &amp; IT Support" />
+<meta name="twitter:description" content="Open to full-time roles and freelance. Front-end and full-stack development, plus IT support, help desk, and networking. Cisco CCNA (2024)." />
+<meta name="twitter:image" content="https://zacharyplumey.com/og.png" />
+<meta name="twitter:image:alt" content="Zachary Plumey — front-end and full-stack developer, open to full-time roles and freelance work." />
+<meta name="theme-color" content="#1A1A1C" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,6 +38,7 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
+  section.block, #support{ scroll-margin-top:76px }
   body{ font-family:var(--body); background:var(--bg); color:var(--text);
     line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
   a{color:inherit;text-decoration:none}
@@ -41,7 +61,7 @@
   .hero .wrap{position:relative;z-index:2}
   .hero h1{ font-family:var(--disp); font-weight:700; font-size:clamp(2.7rem,8vw,5.4rem); line-height:.98; letter-spacing:-.025em; color:#fff; margin:.28em 0 .32em; }
   .hero h1 .pulse{ color:#fff; -webkit-text-stroke:0; opacity:.55; }
-  .hero .lede{ font-size:clamp(1.05rem,2.1vw,1.32rem); max-width:30ch; color:var(--text); font-weight:400; margin-bottom:2.2em; }
+  .hero .lede{ font-size:clamp(1.05rem,2.1vw,1.32rem); max-width:42ch; color:var(--text); font-weight:400; margin-bottom:2.2em; }
   .hero .lede b{ color:#fff; font-weight:600; }
   .actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:3.2em; }
   .act{ font-family:var(--mono); font-size:.82rem; letter-spacing:.04em; padding:13px 20px; border-radius:3px; transition:transform .2s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease; display:inline-flex; align-items:center; gap:9px; }
@@ -52,7 +72,7 @@
   .act .arr{ transition:transform .2s ease; }
   .act:hover .arr{ transform:translate(2px,-2px); }
   .trio{ display:flex; flex-wrap:wrap; gap:34px; padding-top:26px; border-top:1px solid rgba(255,255,255,.12); }
-  .trio div{ max-width:22ch; }
+  .trio div{ max-width:24ch; }
   .trio .k{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--eyebrow); margin-bottom:5px; }
   .trio .v{ font-size:.94rem; color:var(--dim); line-height:1.45; }
   /* SECTION SHELL */
@@ -90,6 +110,7 @@
   /* SKILLS */
   .skills-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:26px 40px; }
   .skill-group .gl{ font-family:var(--mono); font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  .skill-note{ font-size:.95rem; color:var(--text); margin:0 0 14px; max-width:62ch; }
   .chips{ display:flex; flex-wrap:wrap; gap:8px; }
   .chip{ font-size:.86rem; color:var(--text); background:rgba(255,255,255,.03); border:1px solid var(--line); padding:6px 12px; border-radius:4px; transition:border-color .2s ease,color .2s ease; }
   .chip:hover{ border-color:rgba(255,255,255,.55); color:#fff; }
@@ -124,24 +145,24 @@
 <nav class="nav" id="nav">
   <a href="#top" class="brand">zachary<b>.</b>plumey</a>
   <div class="nav-links">
-    <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#support">IT</a><a href="#contact">Contact</a>
   </div>
-  <a href="https://files.catbox.moe/a7uv7x.pdf" class="btn-dl" target="_blank" rel="noopener">Résumé ↓</a>
+  <a href="/Zachary_Plumey_Resume.pdf" class="btn-dl" target="_blank" rel="noopener">Résumé ↓</a>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Front-End &amp; Full-Stack Developer · AI Automation</div>
+    <div class="eyebrow">Front-End &amp; Full-Stack Developer · IT Support</div>
     <h1>Zachary<br>Plumey<span class="pulse">.</span></h1>
-    <p class="lede">I build and ship web apps front to back — <b>React</b> interfaces, <b>Node.js</b> back-ends, and <b>AI automation</b> — from first call to live deployment.</p>
+    <p class="lede">Open to <b>full-time</b> roles and <b>freelance</b> work — front-end and full-stack development, plus <b>IT support</b>, help desk, and networking.</p>
     <div class="actions">
       <a href="#work" class="act primary">See the work <span class="arr">↗</span></a>
-      <a href="mailto:zacharyplumey2001@gmail.com" class="act ghost">Get in touch</a>
+      <a href="mailto:zachary.plumey@mail.grokbot.com" class="act ghost">Get in touch</a>
     </div>
     <div class="trio">
-      <div><div class="k">End to end</div><div class="v">Consultation, design, build, domain, hosting, launch.</div></div>
-      <div><div class="k">AI agents</div><div class="v">Voice &amp; SMS receptionists with live lead capture.</div></div>
-      <div><div class="k">Stack</div><div class="v">React · Node · Shopify · n8n · Bland AI · Twilio</div></div>
+      <div><div class="k">Open to</div><div class="v">Full-time jobs and freelance projects.</div></div>
+      <div><div class="k">Focus</div><div class="v">Front-end, full-stack, help desk, and networking.</div></div>
+      <div><div class="k">Based</div><div class="v">Greater Chicago Area</div></div>
     </div>
   </div>
 </header>
@@ -150,52 +171,54 @@
   <section class="block" id="work">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-idx">01</span><h2 class="sec-title">Selected Work</h2><span class="sec-sub">Client sites &amp; systems, shipped</span>
+        <span class="sec-idx">01</span><h2 class="sec-title">Selected Work</h2><span class="sec-sub">Client sites &amp; code, shipped</span>
       </div>
       <div class="grid">
 
         <article class="card linked reveal">
+          <a class="stretch" href="https://github.com/XachP/predictivetrade" target="_blank" rel="noopener" aria-label="Predictive Trading Dashboard on GitHub"></a>
+          <span class="go">↗</span>
+          <div class="pj-top"><div><h3>Predictive Trading Dashboard</h3><div class="type">Personal · Code</div></div></div>
+          <p>Python paper-trading bot on live market data via REST and WebSocket, with configurable risk limits. The vantage-ui dashboard is Next.js, React, and TypeScript, with charts and an API route for state updates.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span></div>
+        </article>
+
+        <article class="card linked reveal">
           <a class="stretch" href="https://coreterra.onrender.com" target="_blank" rel="noopener" aria-label="CoreTerra Flooring"></a>
           <span class="go">↗</span>
-          <div class="pj-top"><div><h3>CoreTerra Flooring</h3><div class="type">Commercial · Build + AI</div></div></div>
-          <p>Full brand site, build, and deployment for a commercial flooring contractor — plus an AI phone receptionist and SMS lead capture.</p>
-          <div class="tags"><span class="tag">React</span><span class="tag">Render</span><span class="tag">Bland AI</span><span class="tag">Twilio</span></div>
+          <div class="pj-top"><div><h3>CoreTerra Flooring</h3><div class="type">Commercial · Site</div></div></div>
+          <p>Production site for a commercial flooring contractor — responsive layout, deployed on Render, with lead capture and automated SMS.</p>
+          <div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Render</span><span class="tag">Twilio</span></div>
         </article>
 
         <article class="card linked reveal">
           <a class="stretch" href="https://heritagefloorworks.com" target="_blank" rel="noopener" aria-label="Heritage Floorworks"></a>
           <span class="go">↗</span>
-          <div class="pj-top"><div><h3>Heritage Floorworks</h3><div class="type">Flooring · Build + AI</div></div></div>
-          <p>Brand site for a Connecticut flooring &amp; epoxy contractor — built and deployed, with an AI phone agent for lead capture.</p>
-          <div class="tags"><span class="tag">Web design</span><span class="tag">Render</span><span class="tag">Bland AI</span><span class="tag">Local SEO</span></div>
-        </article>
-
-        <article class="card reveal">
-          <div class="pj-top"><div><h3>True North</h3><div class="type">Web design · Build</div></div></div>
-          <p>Custom website designed and built end-to-end — from layout and content to domain, hosting, and launch.</p>
-          <div class="tags"><span class="tag">Web design</span><span class="tag">Render</span><span class="tag">DNS</span></div>
+          <div class="pj-top"><div><h3>Heritage Floorworks</h3><div class="type">Flooring · Site</div></div></div>
+          <p>Brand site for a Connecticut flooring and epoxy contractor — built, deployed, and measured with GA4.</p>
+          <div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Render</span><span class="tag">GA4</span></div>
         </article>
 
         <article class="card linked reveal">
-          <a class="stretch" href="https://a-dpowerwashing.com" target="_blank" rel="noopener" aria-label="A&D Power Washing"></a>
+          <a class="stretch" href="https://a-dpowerwashing.com" target="_blank" rel="noopener" aria-label="A&amp;D Power Washing"></a>
           <span class="go">↗</span>
-          <div class="pj-top"><div><h3>A&amp;D Power Washing</h3><div class="type">Service · Build + AI</div></div></div>
-          <p>Service site with a before/after slider and an AI lead-capture agent that logs to Sheets and fires instant SMS + email alerts.</p>
-          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Bland AI</span><span class="tag">Twilio</span><span class="tag">Apps Script</span></div>
+          <div class="pj-top"><div><h3>A&amp;D Power Washing</h3><div class="type">Service · Site</div></div></div>
+          <p>Service site with a before/after slider. Lead capture logs to Sheets and sends SMS and email alerts.</p>
+          <div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Google Apps Script</span><span class="tag">Twilio</span></div>
         </article>
 
         <article class="card linked reveal">
           <a class="stretch" href="https://elarobuilders.com" target="_blank" rel="noopener" aria-label="Elaro Builders"></a>
           <span class="go">↗</span>
-          <div class="pj-top"><div><h3>Elaro Builders</h3><div class="type">Home builder · Web design</div></div></div>
-          <p>Site for a custom luxury home builder in Florida — clean, project-forward design built to showcase high-end work.</p>
-          <div class="tags"><span class="tag">Web design</span><span class="tag">Render</span><span class="tag">DNS</span></div>
+          <div class="pj-top"><div><h3>Elaro Builders</h3><div class="type">Home builder · Site</div></div></div>
+          <p>React site for a custom luxury home builder in Florida — project-forward layout, deployed on Render.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">HTML / CSS</span><span class="tag">Render</span></div>
         </article>
 
         <article class="card reveal">
           <div class="pj-top"><div><h3>SoftCuff</h3><div class="type">DTC e-commerce</div></div></div>
-          <p>Direct-to-consumer Shopify storefront with Klaviyo email flows, Google Ads, and SEO content — built and benchmarked against category competitors.</p>
-          <div class="tags"><span class="tag">Shopify</span><span class="tag">Klaviyo</span><span class="tag">Google Ads</span><span class="tag">SEO</span></div>
+          <p>Direct-to-consumer Shopify storefront with custom Liquid theming, Klaviyo, and SEO / GA4.</p>
+          <div class="tags"><span class="tag">Shopify</span><span class="tag">Liquid</span><span class="tag">Klaviyo</span><span class="tag">GA4</span></div>
         </article>
 
       </div>
@@ -210,45 +233,41 @@
       <div class="rail">
 
         <div class="job reveal">
-          <div class="when">2024 — Present</div>
-          <h3>Founder · Web Developer &amp; AI Automation Consultant</h3>
-          <div class="co">ZJP Ventures LLC · Chicago, IL</div>
+          <div class="when">Jan 2024 — Present</div>
+          <h3>Front-End / Web Developer, Founder</h3>
+          <div class="co">ZJP Ventures LLC · Chicago, IL (Remote)</div>
           <ul>
-            <li>Build and deploy full client websites end-to-end — consultation, scope, design, domain and hosting, and launch — on React, Node.js, and Render.</li>
-            <li>Built AI voice and SMS receptionists with Bland AI and Twilio (A2P 10DLC registered), capturing leads to Google Sheets with automated SMS and email alerts.</li>
-            <li>Designed n8n workflow automations for lead routing, cross-listing, and content pipelines, cutting manual work for clients.</li>
-            <li>Launched a DTC Shopify storefront with Klaviyo flows, Google Ads, and SEO; manage local SEO, Google Business Profile, and GA4 for service clients.</li>
+            <li>Built and deployed seven production client sites (HTML/CSS/JavaScript, Webflow, Render/Netlify) with responsive, mobile-first, cross-browser layouts.</li>
+            <li>Own the full UI layer from semantic HTML5/CSS3 through form handling and data-fetching against REST APIs; deliver accessible, on-brand interfaces.</li>
+            <li>Integrate front-ends with live back-end services (Node.js, Google Apps Script, Twilio) for lead capture, automated SMS/email, and scheduling.</li>
+            <li>Built a DTC Shopify storefront with custom Liquid theming and responsive UI (Klaviyo, SEO, GA4). Daily Git/GitHub workflow with modern AI-assisted development tools.</li>
           </ul>
         </div>
 
         <div class="job reveal">
-          <div class="when">2022 — 2024</div>
-          <h3>Supervising Manager &amp; Mentor</h3>
-          <div class="co">Globe Life — Liberty National · Insurance Sales</div>
+          <div class="when">May 2024 — Dec 2024</div>
+          <h3>Account Manager</h3>
+          <div class="co">Globe Life — Liberty National Division · Lisle, IL (Hybrid)</div>
           <ul>
-            <li>Earned Illinois Life and Health certifications within the first three months, demonstrating a fast grasp of complex regulatory requirements.</li>
-            <li>Promoted to a leadership role and completed advanced training in Texas, then recruited, trained, and mentored a team of new agents.</li>
-            <li>Built a training program covering the full sales cycle on a repeatable, duplicable model.</li>
+            <li>Advised families on life insurance solutions; managed client relationships via clear communication and CRM tracking.</li>
           </ul>
         </div>
 
         <div class="job reveal">
-          <div class="when">2021 — 2024</div>
-          <h3>Owner &amp; Lead Painter</h3>
-          <div class="co">365 Painters LLC · Chicago, IL</div>
+          <div class="when">Feb 2020 — May 2024</div>
+          <h3>Painter</h3>
+          <div class="co">LBC · LaGrange, IL</div>
           <ul>
-            <li>Founded and ran a painting company across residential and industrial projects, managing the full lifecycle from acquisition and quoting to completion and invoicing.</li>
-            <li>Performed minor interior and exterior construction, maintaining a quality-first standard that produced repeat clients.</li>
+            <li>Delivered consistent, deadline-driven work in a customer-facing trade role.</li>
           </ul>
         </div>
 
         <div class="job reveal">
-          <div class="when">2019 — 2024</div>
-          <h3>Foreman</h3>
-          <div class="co">CertaPro Painters · Chicago, IL</div>
+          <div class="when">Earlier</div>
+          <h3>Crew Member</h3>
+          <div class="co">AMC Theatres · Chipotle Mexican Grill</div>
           <ul>
-            <li>Progressed from Apprentice to Foreman through demonstrated expertise and leadership, running projects from walkthrough to final sign-off.</li>
-            <li>Held 100% customer satisfaction through clear communication, and led crews while independently managing solo jobs.</li>
+            <li>Customer service and teamwork.</li>
           </ul>
         </div>
 
@@ -259,24 +278,25 @@
   <section class="block" id="skills">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-idx">03</span><h2 class="sec-title">Skills</h2><span class="sec-sub">Stack &amp; tools</span>
+        <span class="sec-idx">03</span><h2 class="sec-title">Skills</h2><span class="sec-sub">Development</span>
       </div>
       <div class="skills-grid">
         <div class="skill-group reveal">
-          <div class="gl">Web &amp; App Development</div>
-          <div class="chips"><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">HTML / CSS</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span><span class="chip">Render</span><span class="chip">WordPress</span></div>
+          <div class="gl">Web &amp; Interfaces</div>
+          <div class="chips"><span class="chip">JavaScript (ES6+)</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">Webflow</span><span class="chip">WordPress</span></div>
         </div>
         <div class="skill-group reveal">
-          <div class="gl">AI &amp; Automation</div>
-          <div class="chips"><span class="chip">Bland AI</span><span class="chip">Twilio (A2P 10DLC)</span><span class="chip">n8n</span><span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span></div>
+          <div class="gl">Back-end &amp; Data</div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Streamlit</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span></div>
         </div>
         <div class="skill-group reveal">
-          <div class="gl">E-commerce &amp; Marketing</div>
-          <div class="chips"><span class="chip">Shopify</span><span class="chip">Klaviyo</span><span class="chip">Google Ads</span><span class="chip">SEO</span><span class="chip">Google Business Profile</span><span class="chip">GA4</span></div>
+          <div class="gl">Shipping &amp; Client Work</div>
+          <div class="chips"><span class="chip">Shopify / Liquid</span><span class="chip">Klaviyo</span><span class="chip">Render</span><span class="chip">Netlify</span><span class="chip">Decap CMS</span><span class="chip">Twilio</span><span class="chip">Google Apps Script</span><span class="chip">SEO / GA4</span></div>
         </div>
-        <div class="skill-group reveal">
-          <div class="gl">Cloud &amp; Networking</div>
-          <div class="chips"><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">GCP</span><span class="chip">Cisco (CCNA)</span><span class="chip">LAN admin</span><span class="chip">Network security</span></div>
+        <div class="skill-group reveal" id="support">
+          <div class="gl">IT Support &amp; Networking</div>
+          <p class="skill-note">Associate's degree in Information Technology and a Cisco CCNA (2024). Troubleshooting, documentation, and client communication for help desk and network support.</p>
+          <div class="chips"><span class="chip">Technical troubleshooting</span><span class="chip">Documentation</span><span class="chip">Client support</span><span class="chip">CRM</span><span class="chip">Cisco CCNA (2024)</span></div>
         </div>
       </div>
     </div>
@@ -291,20 +311,21 @@
         <div class="reveal">
           <div class="col-label">Education</div>
           <div class="edu-item">
-            <div class="when">2019 — 2024</div>
-            <h3>A.A.S., Computer &amp; Local Area Network Technician</h3>
+            <div class="when">Aug 2022 — Dec 2024</div>
+            <h3>Associate's Degree, Computer Science</h3>
             <div class="co">Moraine Valley Community College</div>
           </div>
           <div class="edu-item">
-            <div class="when">2019</div>
-            <h3>High School Diploma</h3>
-            <div class="co">Argo Community High School</div>
+            <div class="when">2019 — 2022</div>
+            <h3>Associate's Degree, Information Technology</h3>
+            <div class="co">Moraine Valley Community College</div>
           </div>
         </div>
         <div class="reveal">
           <div class="col-label">Certifications</div>
-          <div class="chips">
-            <span class="chip">Cisco CCNA</span><span class="chip">Network Security Associate</span><span class="chip">Network Administrator</span><span class="chip">Computer Technician</span><span class="chip">LAN Technician</span><span class="chip">Computer Support Associate</span><span class="chip">D-Wave: Intro to Quantum Computation</span><span class="chip">Arduino</span>
+          <div class="edu-item">
+            <div class="when">2024</div>
+            <h3>Cisco Certified Network Associate (CCNA)</h3>
           </div>
         </div>
       </div>
@@ -314,16 +335,17 @@
 
 <footer class="foot" id="contact">
   <div class="wrap">
-    <div class="eyebrow">Available for work</div>
-    <h2>Let's build<br>something <span>good.</span></h2>
+    <div class="eyebrow">Full-time roles &amp; freelance</div>
+    <h2>Open to roles<br>and <span>freelance.</span></h2>
     <div class="foot-actions">
-      <a href="mailto:zacharyplumey2001@gmail.com" class="act primary">Email me <span class="arr">↗</span></a>
+      <a href="mailto:zachary.plumey@mail.grokbot.com" class="act primary">Email me <span class="arr">↗</span></a>
+      <a href="/Zachary_Plumey_Resume.pdf" class="act ghost" target="_blank" rel="noopener">Résumé</a>
       <a href="https://github.com/XachP" target="_blank" rel="noopener" class="act ghost">GitHub</a>
       <a href="https://www.linkedin.com/in/zachary-plumey-a905751b7/" target="_blank" rel="noopener" class="act ghost">LinkedIn</a>
     </div>
     <div class="foot-meta">
-      <span>Zachary Plumey · Chicago, IL</span>
-      <span><a href="tel:+17089864911">(708) 986-4911</a> · <a href="mailto:zacharyplumey2001@gmail.com">zacharyplumey2001@gmail.com</a></span>
+      <span>Zachary Plumey · Greater Chicago Area</span>
+      <span><a href="tel:+17089864911">(708) 986-4911</a> · <a href="mailto:zachary.plumey@mail.grokbot.com">zachary.plumey@mail.grokbot.com</a></span>
     </div>
   </div>
 </footer>
@@ -332,10 +354,15 @@
   const nav=document.getElementById('nav');
   const onScroll=()=>{ nav.classList.toggle('solid', window.scrollY>40); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-  const io=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  }
 </script>
 </body>
 </html>
