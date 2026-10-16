@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Zachary Plumey — Front-End, Full-Stack Developer &amp; IT Support</title>
-<meta name="description" content="Zachary Plumey is a front-end and full-stack developer in the Greater Chicago Area, also available for IT support, help desk, and networking. Open to full-time roles and freelance work." />
-<link rel="canonical" href="https://zacharyplumey.com/" />
+<title>Zachary Plumey — IT Support &amp; Front-End / Full-Stack Developer</title>
+<meta name="description" content="Zachary Plumey is an IT support and front-end / full-stack developer. Chicago area or remote. Open to full-time roles and freelance work. Cisco CCNA (2024)." />
+<link rel="canonical" href="https://zacharyplumey.com" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Zachary Plumey" />
-<meta property="og:url" content="https://zacharyplumey.com/" />
-<meta property="og:title" content="Zachary Plumey — Front-End, Full-Stack &amp; IT Support" />
-<meta property="og:description" content="Open to full-time roles and freelance. Front-end and full-stack development, plus IT support, help desk, and networking. Cisco CCNA (2024)." />
+<meta property="og:url" content="https://zacharyplumey.com" />
+<meta property="og:title" content="Zachary Plumey — IT Support &amp; Front-End / Full-Stack Developer" />
+<meta property="og:description" content="Chicago area or remote. Open to full-time roles and freelance work. IT support, help desk, and front-end / full-stack development. Cisco CCNA (2024)." />
 <meta property="og:image" content="https://zacharyplumey.com/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Zachary Plumey — front-end and full-stack developer, open to full-time roles and freelance work." />
+<meta property="og:image:alt" content="Zachary Plumey — IT support and front-end / full-stack developer, Chicago area or remote, open to full-time roles and freelance work." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Zachary Plumey — Front-End, Full-Stack &amp; IT Support" />
-<meta name="twitter:description" content="Open to full-time roles and freelance. Front-end and full-stack development, plus IT support, help desk, and networking. Cisco CCNA (2024)." />
+<meta name="twitter:title" content="Zachary Plumey — IT Support &amp; Front-End / Full-Stack Developer" />
+<meta name="twitter:description" content="Chicago area or remote. Open to full-time roles and freelance work. IT support, help desk, and front-end / full-stack development. Cisco CCNA (2024)." />
 <meta name="twitter:image" content="https://zacharyplumey.com/og.png" />
-<meta name="twitter:image:alt" content="Zachary Plumey — front-end and full-stack developer, open to full-time roles and freelance work." />
+<meta name="twitter:image:alt" content="Zachary Plumey — IT support and front-end / full-stack developer, Chicago area or remote, open to full-time roles and freelance work." />
 <meta name="theme-color" content="#1A1A1C" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
@@ -61,7 +61,7 @@
   .hero .wrap{position:relative;z-index:2}
   .hero h1{ font-family:var(--disp); font-weight:700; font-size:clamp(2.7rem,8vw,5.4rem); line-height:.98; letter-spacing:-.025em; color:#fff; margin:.28em 0 .32em; }
   .hero h1 .pulse{ color:#fff; -webkit-text-stroke:0; opacity:.55; }
-  .hero .lede{ font-size:clamp(1.05rem,2.1vw,1.32rem); max-width:42ch; color:var(--text); font-weight:400; margin-bottom:2.2em; }
+  .hero .lede{ font-size:clamp(1.05rem,2.1vw,1.28rem); max-width:46rem; color:var(--text); font-weight:400; margin-bottom:2.2em; }
   .hero .lede b{ color:#fff; font-weight:600; }
   .actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:3.2em; }
   .act{ font-family:var(--mono); font-size:.82rem; letter-spacing:.04em; padding:13px 20px; border-radius:3px; transition:transform .2s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease; display:inline-flex; align-items:center; gap:9px; }
@@ -93,6 +93,10 @@
   .tag{ font-family:var(--mono); font-size:.7rem; letter-spacing:.03em; color:var(--text); background:rgba(255,255,255,.04); border:1px solid var(--line); padding:4px 9px; border-radius:3px; }
   .card .go{ position:absolute; top:24px; right:24px; color:var(--dim); font-family:var(--mono); font-size:1rem; transition:transform .22s ease, color .22s ease; }
   .card.linked:hover .go{ color:#fff; transform:translate(3px,-3px); }
+  .card.note{ cursor:default; }
+  .card.note:hover{ transform:none; border-color:var(--card-line); box-shadow:none; }
+  .card .go.quiet{ font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--soft); }
+  .card.note:hover .go.quiet{ color:var(--soft); transform:none; }
   .stretch{ position:absolute; inset:0; }
   /* EXPERIENCE rail */
   .rail{ position:relative; padding-left:28px; }
@@ -109,6 +113,7 @@
   .job li::before{ content:"\25B9"; position:absolute; left:0; color:#fff; font-size:.8rem; top:2px; opacity:.8; }
   /* SKILLS */
   .skills-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:26px 40px; }
+  .skill-group.wide{ grid-column:1 / -1; }
   .skill-group .gl{ font-family:var(--mono); font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--line); }
   .skill-note{ font-size:.95rem; color:var(--text); margin:0 0 14px; max-width:62ch; }
   .chips{ display:flex; flex-wrap:wrap; gap:8px; }
@@ -137,7 +142,11 @@
   .hero h1{ animation-delay:.08s } .hero .lede{ animation-delay:.16s } .hero .actions{ animation-delay:.24s } .hero .trio{ animation-delay:.32s }
   @keyframes rise{ to{ opacity:1; transform:none } }
   @media(max-width:760px){ .nav-links{ display:none } .grid,.skills-grid,.twocol{ grid-template-columns:1fr } section.block{ padding:72px 0 } .hero{ min-height:auto; padding:128px 0 68px } .trio{ gap:22px } .sec-sub{ display:none } }
-  @media(prefers-reduced-motion:reduce){ *{ animation:none !important; transition:none !important } .reveal{ opacity:1; transform:none } html{ scroll-behavior:auto } }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{ animation:none !important; transition:none !important; }
+    .reveal,.hero .eyebrow,.hero h1,.hero .lede,.hero .actions,.hero .trio{ opacity:1; transform:none; }
+    html{ scroll-behavior:auto; }
+  }
 </style>
 </head>
 <body>
@@ -147,22 +156,23 @@
   <div class="nav-links">
     <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#support">IT</a><a href="#contact">Contact</a>
   </div>
-  <a href="/Zachary_Plumey_Resume.pdf" class="btn-dl" target="_blank" rel="noopener">Résumé ↓</a>
+  <a href="/Zachary-Plumey-Resume.pdf" class="btn-dl" target="_blank" rel="noopener">Résumé ↓</a>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Front-End &amp; Full-Stack Developer · IT Support</div>
+    <div class="eyebrow">Chicago area or remote</div>
     <h1>Zachary<br>Plumey<span class="pulse">.</span></h1>
-    <p class="lede">Open to <b>full-time</b> roles and <b>freelance</b> work — front-end and full-stack development, plus <b>IT support</b>, help desk, and networking.</p>
+    <p class="lede"><b>IT Support &amp; Front-End / Full-Stack Developer</b> — open to full-time roles and freelance work.</p>
     <div class="actions">
       <a href="#work" class="act primary">See the work <span class="arr">↗</span></a>
+      <a href="/Zachary-Plumey-Resume.pdf" class="act ghost" target="_blank" rel="noopener">Résumé</a>
       <a href="mailto:zachary.plumey@mail.grokbot.com" class="act ghost">Get in touch</a>
     </div>
     <div class="trio">
-      <div><div class="k">Open to</div><div class="v">Full-time jobs and freelance projects.</div></div>
-      <div><div class="k">Focus</div><div class="v">Front-end, full-stack, help desk, and networking.</div></div>
-      <div><div class="k">Based</div><div class="v">Greater Chicago Area</div></div>
+      <div><div class="k">Open to</div><div class="v">Full-time roles and freelance work.</div></div>
+      <div><div class="k">Focus</div><div class="v">IT support, front-end, and full-stack.</div></div>
+      <div><div class="k">Where</div><div class="v">Chicago area or remote.</div></div>
     </div>
   </div>
 </header>
@@ -181,6 +191,12 @@
           <div class="pj-top"><div><h3>Predictive Trading Dashboard</h3><div class="type">Personal · Code</div></div></div>
           <p>Python paper-trading bot on live market data via REST and WebSocket, with configurable risk limits. The vantage-ui dashboard is Next.js, React, and TypeScript, with charts and an API route for state updates.</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span></div>
+        </article>
+
+        <article class="card note reveal">
+          <span class="go quiet">Private</span>
+          <div class="pj-top"><div><h3>FLASHR</h3><div class="type">Trading dashboard</div></div></div>
+          <p>A trading dashboard. Sign-in is required, so this is a description only and not a public demo.</p>
         </article>
 
         <article class="card linked reveal">
@@ -278,7 +294,7 @@
   <section class="block" id="skills">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-idx">03</span><h2 class="sec-title">Skills</h2><span class="sec-sub">Development</span>
+        <span class="sec-idx">03</span><h2 class="sec-title">Skills</h2><span class="sec-sub">Development &amp; IT support</span>
       </div>
       <div class="skills-grid">
         <div class="skill-group reveal">
@@ -289,14 +305,14 @@
           <div class="gl">Back-end &amp; Data</div>
           <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Streamlit</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span></div>
         </div>
-        <div class="skill-group reveal">
+        <div class="skill-group wide reveal">
           <div class="gl">Shipping &amp; Client Work</div>
           <div class="chips"><span class="chip">Shopify / Liquid</span><span class="chip">Klaviyo</span><span class="chip">Render</span><span class="chip">Netlify</span><span class="chip">Decap CMS</span><span class="chip">Twilio</span><span class="chip">Google Apps Script</span><span class="chip">SEO / GA4</span></div>
         </div>
-        <div class="skill-group reveal" id="support">
+        <div class="skill-group wide reveal" id="support">
           <div class="gl">IT Support &amp; Networking</div>
-          <p class="skill-note">Associate's degree in Information Technology and a Cisco CCNA (2024). Troubleshooting, documentation, and client communication for help desk and network support.</p>
-          <div class="chips"><span class="chip">Technical troubleshooting</span><span class="chip">Documentation</span><span class="chip">Client support</span><span class="chip">CRM</span><span class="chip">Cisco CCNA (2024)</span></div>
+          <p class="skill-note">Help desk and desk-side support, endpoint administration, and networking. Cisco Certified Network Associate (CCNA), 2024, and an associate's degree in Information Technology.</p>
+          <div class="chips"><span class="chip">Help desk / desk-side support</span><span class="chip">Windows</span><span class="chip">macOS</span><span class="chip">Microsoft 365 admin</span><span class="chip">Active Directory</span><span class="chip">Intune</span><span class="chip">ServiceNow</span><span class="chip">Remedy</span><span class="chip">Autotask</span><span class="chip">Networking</span><span class="chip">Cisco CCNA (2024)</span><span class="chip">PowerShell</span><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">Linux CLI</span></div>
         </div>
       </div>
     </div>
@@ -339,13 +355,14 @@
     <h2>Open to roles<br>and <span>freelance.</span></h2>
     <div class="foot-actions">
       <a href="mailto:zachary.plumey@mail.grokbot.com" class="act primary">Email me <span class="arr">↗</span></a>
-      <a href="/Zachary_Plumey_Resume.pdf" class="act ghost" target="_blank" rel="noopener">Résumé</a>
+      <a href="tel:+17087107060" class="act ghost">(708) 710-7060</a>
+      <a href="/Zachary-Plumey-Resume.pdf" class="act ghost" target="_blank" rel="noopener">Résumé</a>
       <a href="https://github.com/XachP" target="_blank" rel="noopener" class="act ghost">GitHub</a>
       <a href="https://www.linkedin.com/in/zachary-plumey-a905751b7/" target="_blank" rel="noopener" class="act ghost">LinkedIn</a>
     </div>
     <div class="foot-meta">
-      <span>Zachary Plumey · Greater Chicago Area</span>
-      <span><a href="tel:+17089864911">(708) 986-4911</a> · <a href="mailto:zachary.plumey@mail.grokbot.com">zachary.plumey@mail.grokbot.com</a></span>
+      <span>Zachary Plumey · Chicago area</span>
+      <span><a href="tel:+17087107060">(708) 710-7060</a> · <a href="mailto:zachary.plumey@mail.grokbot.com">zachary.plumey@mail.grokbot.com</a></span>
     </div>
   </div>
 </footer>
